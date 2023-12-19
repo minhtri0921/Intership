@@ -1,0 +1,31 @@
+<div v-if="type === 'A'">A</div>
+<div v-else-if="type === 'B'">B</div>
+<div v-else-if="type === 'C'">C</div>
+<div v-else-if="type === 'D'">D</div>
+<div v-else>Chiến Sĩ không thể nhớ nổi</div>
+
+<!-- v-for-object -->
+<ul id="v-for-object" class="demo">
+    <li v-for="(value, key, index) in object">
+        {{ index }}. {{ key }}: {{ value }}
+    </li>
+</ul>
+<!-- to-do-list -->
+<div id="todo-list-example">
+    <input
+      v-model="newTodoText"
+      v-on:keyup.enter="addNewTodo"
+      placeholder="Thêm việc cần làm"
+    >
+    <ul>
+      <li
+        is="todo-item"
+        v-for="(todo, index) in todos"
+        v-bind:key="todo.id"
+        v-bind:title="todo.title"
+        v-on:remove="todos.splice(index, 1)"
+      ></li>
+    </ul>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src='main.js'></script>

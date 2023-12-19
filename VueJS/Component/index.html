@@ -1,0 +1,15 @@
+<!-- <div id="components-demo">
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+</div> -->
+
+<!-- Gửi thông tin đến đối tượng cha bằng sự kiện -->
+
+<div id="blog-posts-events-demo">
+    <div :style="{ fontSize: postFontSize + 'em' }">
+        <blog-post v-for="post in posts" :key="post.id" :post="post" v-on:enlarge-text="enlargeText"></blog-post>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src='main.js'></script>

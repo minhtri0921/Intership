@@ -1,0 +1,51 @@
+<!-- app-1 -->
+<div id="app">
+  {{ message }}
+</div>
+<!-- app-2 -->
+<div id="app-2">
+  <span v-bind:title="message">
+    Rê chuột lên đây một vài giây để xem thuộc tính `title` được bind!
+  </span>
+</div>
+<!-- app-3 -->
+<div id="app-3">
+  <span v-if="seen">Thoắt ẩn thoắt hiện</span>
+</div>
+<!-- app-4 -->
+<div id="app-4">
+  <ol>
+    <li v-for="todo in todos">
+      {{ todo.text }}
+    </li>
+  </ol>
+</div>
+<!-- app-5 -->
+<div id="app-5">
+  <p>{{ message }}</p>
+  <button v-on:click="reverseMessage">Reverse Message</button>
+</div>
+<!-- app-6 -->
+<div id="app-6">
+  <p>{{ message }}</p>
+  <input v-model="message">
+</div>
+<!-- app-7 -->
+<div id="app-7">
+  <p>Những thứ họ mua:</p>
+  <ol>
+    <!--
+      Ở đây chúng ta cung cấp một object "todo" cho mỗi component
+      "todo-item". Bằng cách này nội dung của từng component trở nên động.
+      Mỗi component cũng sẽ nhận một thuộc tính "key". Chúng ta sẽ
+      nói thêm về thuộc tính này sau.
+    -->
+    <todo-item
+      v-for="item in groceryList"
+      v-bind:todo="item"
+      v-bind:key="item.id">
+    </todo-item>
+  </ol>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src='main.js'></script>

@@ -1,0 +1,37 @@
+<div id="app">
+    <p>{{ foo }}</p>
+    <!-- foo sẽ không được cập nhật! -->
+    <button @click="foo = 'baz'">Cập nhật đi chứ</button>
+</div>
+
+<div id="example"></div>
+<!-- <p>Sử dụng directive v-html: <span v-html="rawHtml"></span></p> -->
+<button v-bind:disabled="isButtonDisabled">Hòn Vọng Phu</button>
+<!-- app example -->
+
+<div id="example1">
+    <p>Thông điệp ban đầu: "{{ message }}"</p>
+    <p>Thông điệp bị đảo ngược bằng tính toán (computed): "{{ reversedMessage }}"</p>
+</div>
+
+<!-- app demo -->
+
+<div id="demo">{{ fullName }}</div>
+
+<!-- app getset -->
+
+<div id="getset">{{fullName}}</div>
+
+<!-- app watch - example -->
+
+<div id="watch-example">
+    <p>
+        Hãy hỏi một câu hỏi yes/no:
+        <input v-model="question">
+    </p>
+    <p>{{ answer }}</p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+<script src='main.js'></script>

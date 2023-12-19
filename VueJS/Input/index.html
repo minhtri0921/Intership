@@ -1,0 +1,33 @@
+<!-- checkbox -->
+<div id='example-3'>
+    <input type="checkbox" id="com-chien-toi" value="Cơm chiên tỏi" v-model="checkedNames">
+    <label for="com-chien-toi">Cơm chiên tỏi</label><br>
+    <input type="checkbox" id="dot-bi-xao-toi" value="Đọt bí xào tỏi" v-model="checkedNames">
+    <label for="dot-bi-xao-toi">Đọt bí xào tỏi</label><br>
+    <input type="checkbox" id="canh-rau-rung" value="Canh rau rừng" v-model="checkedNames">
+    <label for="canh-rau-rung">Canh rau rừng</label>
+    <br>
+    <span>Món đã chọn: {{ checkedNames }}</span>
+</div>
+<!-- radio-input -->
+<div id="radio-ex">
+    <input type="radio" id="cac-mon-rau" value="Các món rau" v-model="picked">
+    <label for="cac-mon-rau">Các món rau</label><br>
+    <input type="radio" id="cac-mon-thit" value="Các món thịt" v-model="picked">
+    <label for="cac-mon-thit">Các món thịt</label><br>
+    <span>Đã chọn: {{ picked }}</span>
+</div>
+<!-- select -->
+<div id="example-2">
+    <select v-model='selected'>
+        <option v-for='option in options' v-bind:value='option.value'>
+            {{option.text}}
+        </option>
+    </select>
+    <span>
+        Giá bán : {{selected}}
+    </span>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src='main.js'></script>
